@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -1102,6 +1102,53 @@ Res = 680 ohm 1/8W @ 5V</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="S2JLibrary">
+<packages>
+<package name="12MM_TACTILE">
+<smd name="2" x="6.975" y="2.5" dx="1.6" dy="1.6" layer="1"/>
+<smd name="4" x="6.975" y="-2.5" dx="1.6" dy="1.6" layer="1"/>
+<smd name="3" x="-6.975" y="-2.5" dx="1.6" dy="1.6" layer="1"/>
+<smd name="1" x="-6.975" y="2.5" dx="1.6" dy="1.6" layer="1"/>
+<wire x1="6" y1="-1.27" x2="6" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-6" y1="-1.27" x2="-6" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="6" y1="6" x2="-6" y2="6" width="0.1524" layer="21"/>
+<wire x1="-6" y1="-6" x2="6" y2="-6" width="0.1524" layer="21"/>
+<text x="-5.08" y="6.35" size="1.778" layer="25">&gt;NAME</text>
+</package>
+</packages>
+<symbols>
+<symbol name="TACTILE_SPST_NO">
+<pin name="P$1" x="-10.16" y="0" visible="pad" length="middle"/>
+<pin name="P$2" x="10.16" y="0" visible="pad" length="middle" rot="R180"/>
+<wire x1="-5.08" y1="0" x2="5.08" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="3.81" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="3.81" x2="2.54" y2="3.81" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="3.81" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<text x="-5.08" y="-2.54" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TL3300CFXXXQ">
+<gates>
+<gate name="G$1" symbol="TACTILE_SPST_NO" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="12MM_TACTILE">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1 2"/>
+<connect gate="G$1" pin="P$2" pad="3 4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGI_KEY" value="EG4904CT-ND"/>
+<attribute name="MPN" value="TL3300CF160Q"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1131,6 +1178,9 @@ Res = 680 ohm 1/8W @ 5V</description>
 <part name="D3" library="rickk2" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="R1" library="rickk2" deviceset="RES-680-0805" device="" value="680"/>
 <part name="GND4" library="rickk2" deviceset="GND" device=""/>
+<part name="U$3" library="S2JLibrary" deviceset="TL3300CFXXXQ" device=""/>
+<part name="U$4" library="S2JLibrary" deviceset="TL3300CFXXXQ" device=""/>
+<part name="GND5" library="rickk2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1174,8 +1224,8 @@ Res = 680 ohm 1/8W @ 5V</description>
 <instance part="GND1" gate="1" x="101.6" y="119.38" smashed="yes">
 <attribute name="VALUE" x="99.06" y="116.84" size="1.778" layer="96"/>
 </instance>
-<instance part="GND2" gate="1" x="104.14" y="30.48" smashed="yes">
-<attribute name="VALUE" x="101.6" y="27.94" size="1.778" layer="96"/>
+<instance part="GND2" gate="1" x="104.14" y="27.94" smashed="yes">
+<attribute name="VALUE" x="101.6" y="25.4" size="1.778" layer="96"/>
 </instance>
 <instance part="R3" gate="G$1" x="190.5" y="124.46" smashed="yes" rot="R90">
 <attribute name="NAME" x="189.0014" y="120.65" size="1.778" layer="95" rot="R90"/>
@@ -1201,6 +1251,15 @@ Res = 680 ohm 1/8W @ 5V</description>
 </instance>
 <instance part="GND4" gate="1" x="210.82" y="99.06" smashed="yes">
 <attribute name="VALUE" x="208.28" y="96.52" size="1.778" layer="96"/>
+</instance>
+<instance part="U$3" gate="G$1" x="170.18" y="71.12" smashed="yes">
+<attribute name="NAME" x="165.1" y="68.58" size="1.778" layer="95"/>
+</instance>
+<instance part="U$4" gate="G$1" x="170.18" y="58.42" smashed="yes">
+<attribute name="NAME" x="165.1" y="55.88" size="1.778" layer="95"/>
+</instance>
+<instance part="GND5" gate="1" x="185.42" y="45.72" smashed="yes">
+<attribute name="VALUE" x="182.88" y="43.18" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -1304,7 +1363,7 @@ Res = 680 ohm 1/8W @ 5V</description>
 <segment>
 <pinref part="MS1" gate="G$1" pin="GND"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="104.14" y1="38.1" x2="104.14" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="38.1" x2="104.14" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GND21"/>
@@ -1336,6 +1395,16 @@ Res = 680 ohm 1/8W @ 5V</description>
 <pinref part="D3" gate="G$1" pin="C"/>
 <wire x1="210.82" y1="109.22" x2="210.82" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="P$2"/>
+<wire x1="180.34" y1="71.12" x2="185.42" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="71.12" x2="185.42" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="P$2"/>
+<wire x1="185.42" y1="58.42" x2="185.42" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="58.42" x2="185.42" y2="58.42" width="0.1524" layer="91"/>
+<junction x="185.42" y="58.42"/>
+<pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="RX" class="0">
@@ -1398,6 +1467,30 @@ Res = 680 ohm 1/8W @ 5V</description>
 <pinref part="D3" gate="G$1" pin="A"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="210.82" y1="116.84" x2="210.82" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MD" class="0">
+<segment>
+<pinref part="U$3" gate="G$1" pin="P$1"/>
+<wire x1="160.02" y1="71.12" x2="152.4" y2="71.12" width="0.1524" layer="91"/>
+<label x="152.4" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MS1" gate="G$1" pin="MODE"/>
+<wire x1="101.6" y1="38.1" x2="101.6" y2="30.48" width="0.1524" layer="91"/>
+<label x="101.6" y="30.48" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="!RST" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="P$1"/>
+<wire x1="160.02" y1="58.42" x2="152.4" y2="58.42" width="0.1524" layer="91"/>
+<label x="152.4" y="58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MS1" gate="G$1" pin="!RESET"/>
+<wire x1="96.52" y1="38.1" x2="96.52" y2="30.48" width="0.1524" layer="91"/>
+<label x="96.52" y="30.48" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 </nets>

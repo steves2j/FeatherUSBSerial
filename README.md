@@ -1,4 +1,4 @@
-# Feather USB Serial
+# Feather USB Serial Big Fat Switch Edition
 *FT232 USB serial port connection to RX/TX (Serial1) in an Adafruit FeatherWing form-factor*
 
 ![Main](images/main.jpg)
@@ -6,6 +6,7 @@
 This simple board allows easy access to Serial1, typically for debugging purposes. You insert it in a [Adafruit FeatherWing Doubler](https://www.adafruit.com/product/2890) or [Tripler](https://www.adafruit.com/product/3417) along with your device.
 
 While it's no big deal to attach a [FT232 breakout](https://www.sparkfun.com/products/12731), the FeatherWing is nice and neat with no dangling wires.
+Now with Big fat Mode and Reset buttons. No more fiddling trying to reset and DFU that Particle.
 
 ![Schematic](images/schematic.png)
 
@@ -42,3 +43,5 @@ There's also a .lbr file with all of the parts in this project.
 | 1 | FT232RL USB serial | [FTDI FT232RL](https://www.digikey.com/product-detail/en/ftdi-future-technology-devices-international-ltd/FT232RL-REEL/768-1007-1-ND/1836402) |
 | 1 | Micro USB B SMD | [Amphenol FCI 10118194-0001LF](https://www.digikey.com/products/en?keywords=609-4618-1-nd) |
 | | Male header pins 0.1" | [Sullins PRPC040SAAN-RC](https://www.digikey.com/product-detail/en/PRPC040SAAN-RC/S1011EC-40-ND/2775214) |
+| 1 | Tactile Switch Red | [TL3300CF260Q](https://www.digikey.co.nz/product-detail/en/e-switch/TL3300CF260Q/EG4905CT-ND/2498465) |
+| 1 | Tactile Switch Blk | [TL3300CF160Q](https://www.digikey.co.nz/product-detail/en/e-switch/TL3300CF160Q/EG4904CT-ND/2498463) |
