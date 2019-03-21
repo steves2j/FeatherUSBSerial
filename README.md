@@ -33,9 +33,9 @@ There's also a .lbr file with all of the parts in this project.
 
 | Quantity | Item | Example |
 | --- | --- | --- |
-| 1 | 0.01 uF capacitor 0603 | [Murata GCM188R72A103KA37J](https://www.digikey.com/product-detail/en/murata-electronics-north-america/GCM188R72A103KA37J/490-8028-1-ND/4380313) |
-| 2 | 0.1 uF capacitor 0603 | [Murata GRM188R71C104KA01D](https://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM188R71C104KA01D/490-1532-1-ND/587771) |
-| 1 | 4.7 uF capacitor 0603 | [Murata GRM188R60J475KE19J](https://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM188R60J475KE19J/490-6407-1-ND/3845604) |
+| 1 | 0.01 uF capacitor 0805 | [SAMSUNG CL21B103KCANNNC](https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21B103KCANNNC/1276-1249-6-ND/3891763) |
+| 2 | 0.1 uF capacitor 0805 | [SAMSUNG CL21B104KBFNNNE](https://www.digikey.co.nz/product-detail/en/samsung-electro-mechanics/CL21B104KBFNNNE/1276-1180-1-ND/3889266) |
+| 1 | 4.7 uF capacitor 0805 | [Murata GRM21BR61H475KE51L](https://www.digikey.co.nz/product-detail/en/murata-electronics-north-america/GRM21BR61H475KE51L/490-10751-1-ND/5251349) |
 | 1 | Ferrite Bead 40 ohm 0805 | [Laird MI0805K400R-10](https://www.digikey.com/products/en/filters/ferrite-beads-and-chips/841?k=MI0805K400R&k=&pkeyword=MI0805K400R&sv=0&pv7=2&pv1989=0&sf=0&quantity=&ColumnSort=0&page=1&pageSize=25) |
 | 3 | 680 ohm resistor 1/8w 0805 | [Panasonic ERJ-6GEYJ681V](https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6GEYJ681V/P680ACT-ND/90033) | 
 | 2 | LED red 5mA 0603 | [Lite-On LTST-C193KRKT-5A](https://www.digikey.com/product-detail/en/lite-on-inc/LTST-C193KRKT-5A/160-1830-1-ND/2356251) |
