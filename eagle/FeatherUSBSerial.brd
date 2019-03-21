@@ -706,6 +706,8 @@ einem neuen Namen ab.</description>
 <via x="44.45" y="18.415" extent="1-16" drill="0.3937"/>
 <via x="48.26" y="5.08" extent="1-16" drill="0.3937"/>
 <via x="17.0815" y="7.52475" extent="1-16" drill="0.3937"/>
+<via x="8.255" y="5.715" extent="1-16" drill="0.3937"/>
+<via x="8.89" y="21.59" extent="1-16" drill="0.3937"/>
 </signal>
 <signal name="USB-D-">
 <contactref element="U$1" pad="2"/>
@@ -896,12 +898,8 @@ einem neuen Namen ab.</description>
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
 <errors>
-<approved hash="7,39,970bbae209560247"/>
-<approved hash="7,39,38d02831e0bdd6a4"/>
-<approved hash="7,39,f5f6f5d172a9728e"/>
-<approved hash="7,39,6f8b52619c154e87"/>
-<approved hash="7,39,2053d03295fd8ae4"/>
-<approved hash="7,39,f404f4597321737c"/>
+<approved hash="5,1,fb758b10e5d09fa1"/>
+<approved hash="5,1,5b47b671c6002122"/>
 </errors>
 </board>
 </drawing>
